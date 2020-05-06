@@ -1,24 +1,24 @@
-defmodule Millennial do
+defmodule Mom do
   defstruct [shouting: false, question: false, silence: false]
-  defimpl Personality, for: Millennial do
+  defimpl Personality, for: Mom do
     def say(%{silence: true}) do
-      "Fine. Be that way!"
+      "Is that all you've got to say?"
     end
 
     def say(%{shouting: true, question: true}) do
-      "Calm down, I know what I'm doing!"
+      "Go to your room."
     end
 
     def say(%{question: true}) do
-      "Sure."
+      "Go ask your father."
     end
 
     def say(%{shouting: true}) do
-      "Whoa, chill out!"
+      "Really?"
     end
 
     def say(_) do
-      "Whatever."
+      "Isn't that nice."
     end
   end
 end
